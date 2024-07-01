@@ -2,11 +2,15 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Management;
-
+using UnityEngine.UI;
 public class VRManager : MonoBehaviour
 {
     private bool isVRActive = true;
-
+    public Image VRMode;
+    public void OffVR()
+    {
+        StartCoroutine(StopXR());
+    }
     public void ToggleVR()
     {
         if (isVRActive)

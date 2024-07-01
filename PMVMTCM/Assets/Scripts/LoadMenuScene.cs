@@ -7,7 +7,6 @@ public class OpenMenuScene : MonoBehaviour
     private VRManager vrManager; // Añadir referencia al VRManager
     void Start()
     {
-        XRGeneralSettings.Instance.Manager.DeinitializeLoader();
         Screen.orientation = ScreenOrientation.Portrait;
         // Encontrar el VRManager en la escena
         vrManager = FindObjectOfType<VRManager>();
@@ -16,6 +15,7 @@ public class OpenMenuScene : MonoBehaviour
             Debug.LogError("VRManager not found in the scene.");
             return;
         }
+        vrManager.OffVR();
     }
     public void OpenMenu()
     {
@@ -27,3 +27,4 @@ public class OpenMenuScene : MonoBehaviour
         SceneManager.LoadScene("Dispositivos");
     }
 }
+

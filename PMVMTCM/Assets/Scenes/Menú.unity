@@ -394,24 +394,27 @@ MonoBehaviour:
   devicesIcon: {fileID: 0}
   devicesText: {fileID: 0}
   themeMode: {fileID: 0}
+  VRMode: {fileID: 0}
   panel: {fileID: 2076847728}
   tipBackground: {fileID: 1833322833}
   tipIcon: {fileID: 1663709910}
   tipHint: {fileID: 1350486019}
-  pairedDevicesButton: {fileID: 0}
-  pairedDevicesText: {fileID: 0}
+  scanButton: {fileID: 0}
+  scanText: {fileID: 0}
+  scanIcon: {fileID: 0}
   connectButton: {fileID: 0}
   connectButtonText: {fileID: 0}
+  connectIcon: {fileID: 0}
   disconnectButton: {fileID: 0}
   disconnectButtonText: {fileID: 0}
-  deviceAddressInputPlaceholder: {fileID: 0}
-  deviceAddressInputText: {fileID: 0}
+  disconnectIcon: {fileID: 0}
+  dataReceivedText: {fileID: 0}
+  statusText: {fileID: 0}
   cardPrefabPressed: {fileID: 0}
   practiceTitle: {fileID: 0}
   practiceImage: {fileID: 0}
   practiceDescription: {fileID: 0}
   author: {fileID: 0}
-  dataReceivedText: {fileID: 0}
 --- !u!4 &673487450
 Transform:
   m_ObjectHideFlags: 0
@@ -703,7 +706,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1060231702}
-  - component: {fileID: 1060231703}
+  - component: {fileID: 1060231704}
+  - component: {fileID: 1060231706}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -726,7 +730,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1060231703
+--- !u!114 &1060231704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060231699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9cc58cc1dec4496a478a2c1f0cb4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VRMode: {fileID: 0}
+--- !u!114 &1060231706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,7 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92d6c625f08346e0919872346afbaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swipeRange: 200
+  swipeRange: 700
   tapRange: 10
   sceneIndex: 0
 --- !u!1 &1350486017

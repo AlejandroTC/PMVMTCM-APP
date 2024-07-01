@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Management;
 
 public class GalleryController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class GalleryController : MonoBehaviour
 
     void Start()
     {
+
+        Screen.orientation = ScreenOrientation.Portrait;
+
         // Encontrar el VRManager en la escena
         vrManager = FindObjectOfType<VRManager>();
         if (vrManager == null)
@@ -23,6 +27,8 @@ public class GalleryController : MonoBehaviour
             Debug.LogError("VRManager not found in the scene.");
             return;
         }
+
+        vrManager.OffVR();
 
         if (modelNames == null || modelImages == null || modelDescriptions == null)
         {
@@ -113,8 +119,14 @@ public class GalleryController : MonoBehaviour
 
     private IEnumerator StartVRAndLoadScene(string sceneName)
     {
-        vrManager.ToggleVR(); // Activar VR
-
+        // Cambia la orientación de la pantalla y carga la nueva escena
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        yield return new WaitForSecondsRealtime(3);
+        // Activa VR antes de cargar la nueva escena
+        if (vrManager != null)
+        {
+            vrManager.ToggleVR();
+        }
         // Espera un momento para asegurarse de que VR se ha activado
         yield return new WaitForSecondsRealtime(1);
 

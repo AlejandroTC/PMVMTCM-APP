@@ -132,6 +132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 23663837}
   - component: {fileID: 23663835}
+  - component: {fileID: 23663838}
+  - component: {fileID: 23663839}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -151,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9cc58cc1dec4496a478a2c1f0cb4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VRMode: {fileID: 0}
 --- !u!4 &23663837
 Transform:
   m_ObjectHideFlags: 0
@@ -166,6 +169,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23663838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23663834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6547ad6e4994c38b23df689dc6b3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receivedData: 
+--- !u!114 &23663839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23663834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223da9f69b7f2486b9631d0568660518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &36074898
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,24 +564,27 @@ MonoBehaviour:
   devicesIcon: {fileID: 1110252832}
   devicesText: {fileID: 775725655}
   themeMode: {fileID: 1121679562}
+  VRMode: {fileID: 1994707472}
   panel: {fileID: 264208654}
   tipBackground: {fileID: 0}
   tipIcon: {fileID: 0}
   tipHint: {fileID: 0}
-  pairedDevicesButton: {fileID: 0}
-  pairedDevicesText: {fileID: 0}
+  scanButton: {fileID: 0}
+  scanText: {fileID: 0}
+  scanIcon: {fileID: 0}
   connectButton: {fileID: 0}
   connectButtonText: {fileID: 0}
+  connectIcon: {fileID: 0}
   disconnectButton: {fileID: 0}
   disconnectButtonText: {fileID: 0}
-  deviceAddressInputPlaceholder: {fileID: 0}
-  deviceAddressInputText: {fileID: 0}
+  disconnectIcon: {fileID: 0}
+  dataReceivedText: {fileID: 0}
+  statusText: {fileID: 0}
   cardPrefabPressed: {fileID: 0}
   practiceTitle: {fileID: 0}
   practiceImage: {fileID: 0}
   practiceDescription: {fileID: 0}
   author: {fileID: 0}
-  dataReceivedText: {fileID: 0}
 --- !u!4 &492942962
 Transform:
   m_ObjectHideFlags: 0

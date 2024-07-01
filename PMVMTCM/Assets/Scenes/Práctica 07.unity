@@ -258,29 +258,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -5609321221556402741, guid: f34ce971b413a4d549f40c71ad4c777b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 275397681}
+      addedObject: {fileID: 275397682}
     - targetCorrespondingSourceObject: {fileID: -5609321221556402741, guid: f34ce971b413a4d549f40c71ad4c777b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 275397682}
+      addedObject: {fileID: 275397684}
   m_SourcePrefab: {fileID: 9199261849990390558, guid: f34ce971b413a4d549f40c71ad4c777b, type: 3}
 --- !u!1 &275397679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5609321221556402741, guid: f34ce971b413a4d549f40c71ad4c777b, type: 3}
   m_PrefabInstance: {fileID: 140676768}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &275397681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275397679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 298ae862530e541b99f527ecb9faf66a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  model3D: {fileID: 275397679}
 --- !u!135 &275397682
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -302,6 +289,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &275397684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275397679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298ae862530e541b99f527ecb9faf66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model3D: {fileID: 275397679}
 --- !u!1 &420317872
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92d6c625f08346e0919872346afbaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swipeRange: 200
+  swipeRange: 900
   tapRange: 10
   sceneIndex: 1
 --- !u!4 &841894281
@@ -583,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9cc58cc1dec4496a478a2c1f0cb4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VRMode: {fileID: 0}
 --- !u!114 &1367607009
 MonoBehaviour:
   m_ObjectHideFlags: 0

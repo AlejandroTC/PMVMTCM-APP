@@ -7,10 +7,12 @@ public class SwipeGesture : MonoBehaviour
     private Vector2 currentPosition;
     private Vector2 endTouchPosition;
     private bool stopTouch = false;
+    private bool swiping = false; // Bandera para detectar si se está realizando un swipe
 
     public float swipeRange = 50f;  // Distancia mínima para considerar un deslizamiento
     public float tapRange = 10f;    // Distancia máxima para considerar un toque como tap
     public int sceneIndex = 0;
+
     void Update()
     {
         Swipe();
@@ -26,13 +28,14 @@ public class SwipeGesture : MonoBehaviour
             {
                 case TouchPhase.Began:
                     startTouchPosition = touch.position;
+                    swiping = true; // Comienza el swipe
                     break;
 
                 case TouchPhase.Moved:
                     currentPosition = touch.position;
                     Vector2 distance = currentPosition - startTouchPosition;
 
-                    if (!stopTouch)
+                    if (!stopTouch && swiping)
                     {
                         if (distance.x < -swipeRange)
                         {
@@ -60,6 +63,8 @@ public class SwipeGesture : MonoBehaviour
                         Debug.Log("Tap");
                         // Acción para tap
                     }
+
+                    swiping = false; // Finaliza el swipe
                     break;
             }
         }
