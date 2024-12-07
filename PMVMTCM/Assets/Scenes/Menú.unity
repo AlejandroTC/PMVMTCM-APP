@@ -556,10 +556,10 @@ MonoBehaviour:
   cardPrefab: {fileID: 8838888624014863971, guid: 67608cca553ce4e139f14790ce91e0f3, type: 3}
   cardParent: {fileID: 125903057}
   modelImages:
-  - {fileID: 21300000, guid: 573509d722cab486c817761118a23e5c, type: 3}
-  - {fileID: 21300000, guid: 573509d722cab486c817761118a23e5c, type: 3}
-  - {fileID: 21300000, guid: 573509d722cab486c817761118a23e5c, type: 3}
-  - {fileID: 21300000, guid: 573509d722cab486c817761118a23e5c, type: 3}
+  - {fileID: 21300000, guid: 3e1527de2827c4fcfa69607b84e64f5c, type: 3}
+  - {fileID: 21300000, guid: a6b37e403e86a481d89a0114c8ba3f2b, type: 3}
+  - {fileID: 21300000, guid: a2e178695b70f471094cfe18a4913a5b, type: 3}
+  - {fileID: 21300000, guid: 343e8a046224e475f9f012a51aca80a6, type: 3}
   modelNames:
   - "Pr\xE1ctica 07"
   - "Pr\xE1ctica 09"

@@ -118,7 +118,7 @@ public class ThemeListener : MonoBehaviour
             statusText.color = (theme == ThemeManager.Theme.Dark) ? Color.white : Color.black;
 
         if (dataReceivedText != null)
-            dataReceivedText.color = (theme == ThemeManager.Theme.Dark) ? new Color(7 / 255f, 0 / 255f, 171 / 255f) : Color.white;
+            dataReceivedText.color = (theme == ThemeManager.Theme.Dark) ? Color.white : Color.black;
 
 
         // Scene 3

@@ -68,7 +68,6 @@ public class ModelController : MonoBehaviour
 
         string[] values = data.Split(',');
 
-
         try
         {
             if (values.Length == 2)
@@ -117,22 +116,11 @@ public class ModelController : MonoBehaviour
 
     void ScaleModel(float value1, float value2)
     {
-        // Promediar los valores de escalado recientes
-        float newScaleValue = Mathf.Clamp((value1 + value2) / 2.0f, 0.1f, 30.0f);
-        if (scaleValues.Count >= scaleQueueSize)
-        {
-            scaleValues.Dequeue();
-        }
-        scaleValues.Enqueue(newScaleValue);
+        // Se promedia la suma de los dos valores de escalamiento y se asegura que el factor de escala esté en el rango adecuado
+        float newScaleFactor = Mathf.Clamp((value1 + value2) / 2.0f, 0.1f, 30.0f);
 
-        scaleFactor = 0;
-        foreach (float value in scaleValues)
-        {
-            scaleFactor += value;
-        }
-        scaleFactor /= scaleValues.Count;
-
-        model3D.transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+        // Actualizar el tamaño del modelo
+        model3D.transform.localScale = new Vector3(newScaleFactor, newScaleFactor, newScaleFactor);
     }
 
     void SetTargetRotation(float gx, float gy, float gz)
